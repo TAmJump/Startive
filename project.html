@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プロジェクト詳細｜Startive</title>
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<div class="pd-hero">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">ホーム</a> ／ <a href="projects.html">プロジェクト</a> ／ <span id="cbTitle">詳細</span></div>
+    <div class="pd-top">
+      <div>
+        <div class="pd-visual"><div class="thumb"><div class="ph" id="pdThumb" style="position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-family:Satoshi;font-weight:800;font-size:24px;text-align:center;padding:24px"></div></div></div>
+      </div>
+      <div>
+        <span class="pd-cat" id="pdCat"></span>
+        <h1 class="pd-title" id="pdTitle"></h1>
+        <div class="pd-by" id="pdBy"></div>
+
+        <div class="pd-stat">
+          <div class="pd-amt"><span id="pdAmt"></span></div>
+          <div class="pd-goal">目標 <span id="pdGoal"></span> ／ 達成率 <b id="pdPct"></b></div>
+          <div class="pd-bar"><i id="pdBar"></i></div>
+          <div class="pd-nums">
+            <div><b id="pdBackers"></b><span>支援者</span></div>
+            <div><b id="pdDays"></b><span>残り日数</span></div>
+            <div><b id="pdReturns">7</b><span>リターン</span></div>
+          </div>
+
+          <!-- 4 ROUTES — critical -->
+          <div class="route-btns">
+            <button class="rbtn r1" onclick="alert('応援購入フローへ（決済はSquare連携を後続で実装）')">
+              <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></span>
+              <span class="tx"><b>応援購入する</b><span>先行価格・限定特典・体験権</span></span>
+            </button>
+            <button class="rbtn r2" onclick="alert('法人協賛フォームへ（請求書払い対応）')">
+              <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg></span>
+              <span class="tx"><b>法人協賛する</b><span>ロゴ掲載・共同PR</span></span>
+            </button>
+            <button class="rbtn r3" onclick="alert('導入予約フォームへ')">
+              <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 2v4M16 2v4"/></svg></span>
+              <span class="tx"><b>導入予約する</b><span>法人・施設・店舗向け</span></span>
+            </button>
+            <button class="rbtn r4" onclick="alert('代理店応募フォームへ')">
+              <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M16 3.1a3 3 0 0 1 0 5.8"/></svg></span>
+              <span class="tx"><b>代理店として参加</b><span>紹介URL・成果報酬</span></span>
+            </button>
+          </div>
+
+          <div class="pd-share">
+            <a href="#">X で共有</a><a href="#">LINE で送る</a><a href="#">QRコード</a><a href="#">紹介URL</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pd-body">
+  <div class="wrap pd-cols">
+    <div>
+      <div class="tabs">
+        <button class="tab active" data-tab="about">プロジェクト</button>
+        <button class="tab" data-tab="returns">リターン</button>
+        <button class="tab" data-tab="corp">法人協賛</button>
+        <button class="tab" data-tab="adopt">導入予約</button>
+        <button class="tab" data-tab="agent">代理店</button>
+        <button class="tab" data-tab="report">活動報告</button>
+      </div>
+
+      <div class="panel active" id="panel-about">
+        <h3>解決したい課題</h3>
+        <p>現場の手続きや情報共有が、紙や手作業に依存して時間とミスを生んでいます。このプロジェクトは、その負担を実務に即した形で軽くすることを目指します。</p>
+        <h3>なぜ、いま必要か</h3>
+        <p>制度や人手の状況が変わるなかで、現場が無理なく続けられる仕組みが求められています。完成を待つのではなく、関わる人と一緒に育てる段階から公開します。</p>
+        <h3>このプロジェクトで実現すること</h3>
+        <p>応援購入で初期の立ち上げを支え、法人協賛で導入と発信を広げ、導入予約で実運用へ、代理店募集で各地域への展開へ。ひとつのページから、それぞれの関わり方を選べます。</p>
+        <h3>資金の使いみち</h3>
+        <p>開発・運用、現場での実証、説明資料の整備、各地域でのサポート体制づくりに充てます。</p>
+      </div>
+
+      <div class="panel" id="panel-returns">
+        <div class="return"><div class="price">¥3,000</div><h4>先行応援プラン</h4><p>いち早く使えるデジタル利用権と、活動報告のお届け。</p><div class="meta"><span>提供：2026年8月</span><span>数量：無制限</span></div></div>
+        <div class="return"><div class="price">¥10,000</div><h4>体験パック</h4><p>初期セットアップのサポートと、オンライン相談1回つき。</p><div class="meta"><span>提供：2026年9月</span><span>残り：48</span></div></div>
+        <div class="return"><div class="price">¥30,000</div><h4>導入応援プラン</h4><p>初期費用の一部に充当できる先行導入枠。</p><div class="meta"><span>提供：2026年10月</span><span>残り：12</span></div></div>
+      </div>
+
+      <div class="panel" id="panel-corp">
+        <h3>法人協賛メニュー</h3>
+        <div class="return"><div class="price">¥100,000</div><h4>サポート協賛</h4><p>活動報告ページへの企業名掲載。</p><div class="meta"><span>請求書払い対応</span></div></div>
+        <div class="return"><div class="price">¥300,000</div><h4>メインスポンサー</h4><p>プロジェクトページへのロゴ掲載と紹介文。</p><div class="meta"><span>掲載期間：募集期間中</span></div></div>
+        <div class="return"><div class="price">¥1,000,000</div><h4>冠スポンサー</h4><p>共同PRと、プレスリリースへの企業名記載。</p><div class="meta"><span>個別相談</span></div></div>
+      </div>
+
+      <div class="panel" id="panel-adopt">
+        <h3>導入予約</h3>
+        <p>完成前に、法人・施設・店舗・自治体が先行して導入予約できます。無料相談・β版利用の枠もあります。</p>
+        <div class="return"><div class="price">無料相談</div><h4>導入の事前相談</h4><p>運用方法や費用感を、商談ベースで確認できます。</p></div>
+        <div class="return"><div class="price">¥0〜</div><h4>β版導入予約</h4><p>先行導入枠の確保。初期費用は導入時に個別調整。</p></div>
+      </div>
+
+      <div class="panel" id="panel-agent">
+        <h3>代理店募集</h3>
+        <p>地域・業界の販売パートナーを募集します。紹介URLの発行と成果管理に対応します。</p>
+        <div class="aside-card"><h4>募集条件</h4>
+          <div class="row"><span>募集地域</span><b>全国・海外</b></div>
+          <div class="row"><span>報酬</span><b>成果報酬型（個別合意）</b></div>
+          <div class="row"><span>独占権</span><b>地域・業界単位で相談可</b></div>
+          <div class="row"><span>審査</span><b>あり</b></div>
+        </div>
+      </div>
+
+      <div class="panel" id="panel-report">
+        <h3>活動報告</h3>
+        <p>掲載後の進捗は、ここで随時お知らせします。</p>
+      </div>
+    </div>
+
+    <aside>
+      <div class="aside-card">
+        <h4>実行者・実行責任者</h4>
+        <p class="note" style="margin-bottom:12px">このプロジェクトは、本人の想いをもとに、実行責任者が契約・入金・返礼・問い合わせ対応を行います。</p>
+        <div class="row"><span>主役・起案者</span><b id="sideStarter"></b></div>
+        <div class="row"><span>実行責任者</span><b id="sideOwner"></b></div>
+        <div class="row"><span>区分</span><b>法人</b></div>
+        <div class="row"><span>所在地</span><b id="sideRegion"></b></div>
+      </div>
+      <div class="aside-card" style="background:#fffafa;border-color:#eccaca">
+        <h4 style="color:#b83b3b">拡散センター</h4>
+        <p class="note" style="margin-bottom:10px">実行者ログイン後、この画面から拡散します。</p>
+        <div class="row"><span>今日のSNS投稿</span><b>3件</b></div>
+        <div class="row"><span>法人営業メール</span><b>テンプレ</b></div>
+        <div class="row"><span>QRコード / 紹介URL</span><b>発行済</b></div>
+        <a class="btn btn-red btn-sm" href="start.html" style="width:100%;margin-top:14px">掲載して拡散を始める</a>
+      </div>
+      <div class="aside-card">
+        <h4>注意事項</h4>
+        <p class="note">本プロジェクトは投資・配当・元本保証ではありません。特定商取引法に基づく表記、返金・キャンセルポリシーをご確認ください。</p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<div id="site-footer"></div>
+<script src="assets/app.js"></script>
+<script src="assets/projects-data.js"></script>
+<script>
+(function(){
+  var id=new URLSearchParams(location.search).get('id');
+  var all=window.STARTIVE_PROJECTS||[];
+  var p=all.filter(function(x){return x.id===id;})[0]||all[0];
+  if(!p) return;
+  var per=Math.round(p.amount/p.goal*100);
+  var $=function(i){return document.getElementById(i);};
+  document.title=p.title+'｜Startive';
+  $('cbTitle').textContent=p.cat;
+  $('pdThumb').textContent=p.title.split('—')[0].trim();
+  $('pdThumb').style.background='linear-gradient(135deg,'+p.g[0]+','+p.g[1]+')';
+  $('pdCat').textContent=p.cat;
+  $('pdTitle').textContent=p.title;
+  $('pdBy').textContent=p.by;
+  $('pdAmt').textContent=window.startiveYen(p.amount);
+  $('pdGoal').textContent=window.startiveYen(p.goal);
+  $('pdPct').textContent=per+'%';
+  $('pdBar').style.width=Math.min(per,100)+'%';
+  $('pdBackers').textContent=p.backers;
+  $('pdDays').textContent=p.days;
+  $('sideStarter').textContent=p.by.indexOf('実行責任者')>-1?'本人':p.by;
+  $('sideOwner').textContent=p.by.indexOf('実行責任者')>-1?p.by.replace('実行責任者：',''):p.by;
+  $('sideRegion').textContent=p.region;
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プロジェクトを探す｜Startive</title>
+<meta name="description" content="応援購入・法人協賛・導入予約・代理店募集。目的・カテゴリ・地域からプロジェクトを探せます。">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<div class="page-hero">
+  <div class="wrap">
+    <span class="sec-eye">Projects</span>
+    <h1 id="pgTitle">プロジェクトを探す</h1>
+    <p>応援購入・法人協賛・導入予約・代理店募集。目的・カテゴリ・地域から、いま広げているプロジェクトを見つけられます。</p>
+  </div>
+</div>
+
+<section style="padding:44px 0 90px">
+  <div class="wrap">
+    <div class="filters" id="filters">
+      <button class="fpill active" data-f="all">すべて</button>
+      <button class="fpill" data-f="purchase">応援購入</button>
+      <button class="fpill" data-f="corp">法人協賛</button>
+      <button class="fpill" data-f="adopt">導入予約</button>
+      <button class="fpill" data-f="agent">代理店募集</button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/app.js"></script>
+<script src="assets/projects-data.js"></script>
+<script>
+(function(){
+  var grid=document.getElementById('grid'), all=window.STARTIVE_PROJECTS||[];
+  var params=new URLSearchParams(location.search);
+  var initial=params.get('type')||'all';
+  var titleMap={corp:'法人協賛を募集中のプロジェクト',adopt:'導入予約を募集中のプロジェクト',agent:'代理店を募集中のプロジェクト'};
+  if(titleMap[initial]) document.getElementById('pgTitle').textContent=titleMap[initial];
+
+  function render(f){
+    var list = f==='all'?all:all.filter(function(p){return p.types.indexOf(f)>-1;});
+    grid.innerHTML = list.length?list.map(window.renderCard).join('')
+      :'<p style="color:#8a8a90">該当するプロジェクトはまだありません。</p>';
+  }
+  document.querySelectorAll('.fpill').forEach(function(b){
+    if(b.getAttribute('data-f')===initial){document.querySelector('.fpill.active').classList.remove('active');b.classList.add('active');}
+    b.addEventListener('click',function(){
+      document.querySelector('.fpill.active').classList.remove('active');
+      b.classList.add('active');render(b.getAttribute('data-f'));
+    });
+  });
+  render(initial);
+})();
+</script>
+</body>
+</html>
