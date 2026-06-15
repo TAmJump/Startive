@@ -17,7 +17,7 @@
     <div class="crumb"><a href="index.html">ホーム</a> ／ <a href="projects.html">プロジェクト</a> ／ <span id="cbTitle">詳細</span></div>
     <div class="pd-top">
       <div>
-        <div class="pd-visual"><div class="thumb"><div class="ph" id="pdThumb" style="position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-family:Satoshi;font-weight:800;font-size:24px;text-align:center;padding:24px"></div></div></div>
+        <div class="pd-visual"><div class="thumb"><img id="pdImg" alt=""></div></div>
       </div>
       <div>
         <span class="pd-cat" id="pdCat"></span>
@@ -161,8 +161,7 @@
   var $=function(i){return document.getElementById(i);};
   document.title=p.title+'｜Startive';
   $('cbTitle').textContent=p.cat;
-  $('pdThumb').textContent=p.title.split('—')[0].trim();
-  $('pdThumb').style.background='linear-gradient(135deg,'+p.g[0]+','+p.g[1]+')';
+  var img=$('pdImg'); img.src='assets/img/'+p.img+'.jpg'; img.alt=p.title;
   $('pdCat').textContent=p.cat;
   $('pdTitle').textContent=p.title;
   $('pdBy').textContent=p.by;
